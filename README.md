@@ -74,5 +74,27 @@ You need to implement the Users Management Agent, that will be able to perform C
 3. In the end you should have the Agent that is able to fetch the info from the WEB about some people and save it to Users Service
 4. Hint: the problem place is [dial_client](agent/dial_client.py)
 
+## Setup:
+
+```bash
+python3 -m venv .venv
+```
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+...
+deactivate
+```
+
+```bash
+colima start --cpu 2 --memory 4
+docker-compose up -d
+...
+docker-compose stop
+docker-compose down
+colima stop
+```
+
 ---
 # <img src="dialx-banner.png">
