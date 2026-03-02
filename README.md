@@ -77,23 +77,22 @@ You need to implement the Users Management Agent, that will be able to perform C
 ## Setup:
 
 ```bash
-python3 -m venv .venv
-```
-
-```bash
-source .venv/bin/activate
-pip install -r requirements.txt
-...
-deactivate
-```
-
-```bash
 colima start --cpu 2 --memory 4
 docker-compose up -d
 ...
 docker-compose stop
 docker-compose down
 colima stop
+```
+
+```bash
+cd agent
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+...
+deactivate
 ```
 
 ---
